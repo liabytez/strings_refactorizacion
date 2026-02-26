@@ -89,9 +89,18 @@ public class StringImpostor {
             inicio++;
         }
 
-        //buscar ultimo caracter que no sea espacio
-        
+        // buscar ultimo caracter que no sea espacio
+        while(fin >= 0 && s.charAt(fin) == ' ') {
+            fin--;
+        }
 
+        // mostrar frase correctamente
+        String resultado = "";
+
+        for (int i = inicio; i<= fin; i++) {
+            resultado += s.charAt(i);
+        }
+    return resultado;
     }
 
     /**
