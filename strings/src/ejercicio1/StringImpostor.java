@@ -81,7 +81,17 @@ public class StringImpostor {
      * @return la String sin espacios al princpio y al final
      */
     public static String SinSangria(String s){
-        return "";
+        int inicio = 0;
+        int fin = s.length() -1;
+
+        // buscar primer espacio que no sea espacio
+        while (inicio < s.length() && s.charAt(inicio) == ' ') {
+            inicio++;
+        }
+
+        //buscar ultimo caracter que no sea espacio
+        
+
     }
 
     /**
@@ -96,8 +106,12 @@ public class StringImpostor {
      * @return UNA NUEVA STRING, a partir de la anterior
      */
     public static String CortarString(String s, int a, int b){
-        
-        return "";
+        String resultado = "";
+        for (int i = a; i<b && i<s.length(); i++) {
+            resultado += s.charAt(i);
+        }
+
+        return resultado;
     }
 
 
