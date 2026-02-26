@@ -85,18 +85,20 @@ public class StringImpostor {
         int fin = s.length() -1;
 
         // buscar primer espacio que no sea espacio
+        // mientras que inicio sea menor que la longitud de la frase y el caracter sea igual a espacio, guardamos la posicion
         while (inicio < s.length() && s.charAt(inicio) == ' ') {
             inicio++;
         }
 
         // buscar ultimo caracter que no sea espacio
+        // mientras que fin sea mayor o igual que cero (ya que eso seria el inicio) y el caracter sea igual a espacio, guardamos la posicion
         while(fin >= 0 && s.charAt(fin) == ' ') {
             fin--;
         }
 
         // mostrar frase correctamente
         String resultado = "";
-
+        // hacemos un bucle que vaya desde el inicio y fin que previamente han sido denominados y vamos por todas las letras poniendolos bien :p
         for (int i = inicio; i<= fin; i++) {
             resultado += s.charAt(i);
         }

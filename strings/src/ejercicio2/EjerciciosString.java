@@ -24,6 +24,8 @@ public class EjerciciosString {
      * @return el numero total de veces que aparece 'c'
      */
     public static int ContarLetra(String s, char c) {
+
+
         return 0;
     }
 
