@@ -24,9 +24,17 @@ public class EjerciciosString {
      * @return el numero total de veces que aparece 'c'
      */
     public static int ContarLetra(String s, char c) {
+        int contador = 0;
+        // 1. buscar la primera aparicion con indexOf()
+        int posicion = s.indexOf(c);
 
-
-        return 0;
+        // 2. si la encuentra, aumentamos el contador
+        // 3. volvemos a buscar desde la siguiente posicion
+        while (posicion != -1) {
+            contador++;
+            posicion = s.indexOf(c, posicion + 1);
+        }
+        return contador;
     }
 
 
@@ -48,9 +56,9 @@ public class EjerciciosString {
      *
      */
     public static String Filtrar1 (String s1, String s2){
+            
         return "";
     }
-
 
     /**
      *   Ejercicio 3: Desarrollar un método llamado Filtrar2 que, a partir de dos Strings,
